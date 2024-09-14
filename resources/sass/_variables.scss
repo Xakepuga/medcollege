@@ -1,0 +1,172 @@
+// Body
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+);
+
+// Typography
+$font-family-sans-serif: 'Nunito', sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+// Style
+$custom-app-main-color: #41A49E;
+
+$black: #000;
+$form-check-input-border: 2px solid rgba($black, .25);
+
+// Убирает смещение страницы влево при появлении scrollbar-а
+html {
+    overflow-x: hidden;
+    margin-right: calc(-1 * (100vw - 100%));
+}
+
+// "Растяжка" блока с основным контентом во весь экран ("прижатие" футера)
+html,
+body {
+    height: 100%;
+}
+
+.custom-st-wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-st-main {
+    flex: 1 1 auto;
+}
+
+// Стили, используемые кастомными функциями (custom-function)
+
+/* facultyBlock.blade.php */
+.custom-fn-remove-cart {
+    cursor: pointer;
+}
+
+/* backTopButton.js */
+#btn-back-to-top {
+    position: fixed;
+    bottom: -60px;
+    right: 30px;
+    display: none;
+    cursor: pointer;
+    border-radius: 100%;
+    -webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@-webkit-keyframes slide-top {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    100% {
+        -webkit-transform: translateY(-100px);
+        transform: translateY(-100px);
+    }
+}
+@keyframes slide-top {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    100% {
+        -webkit-transform: translateY(-100px);
+        transform: translateY(-100px);
+    }
+}
+
+// Прочие кастомные стили (custom-style)
+.custom-st-master-navbar {
+    background-color: $custom-app-main-color;
+}
+
+.custom-st-dropdown-navbar {
+    font-size: 16px;
+    border-right: 1px solid #CCCCCC;
+}
+
+.dropdown-item:active {
+    background-color: $custom-app-main-color !important;
+}
+
+.custom-st-results-table-bg-color {
+    background-color: #99CCCC;
+}
+
+.custom-st-form-button-size {
+    width: 165px;
+    height: 40px;
+    padding: 6px 12px;
+}
+
+.custom-st-username-color {
+    color: #FFFFFF !important;
+}
+
+.custom-st-dropdown-menu {
+    color: #666666 !important;
+}
+
+.custom-st-fix-circle {
+    width: 15px !important;
+    height: 15px !important;
+}
+
+.custom-st-font-color-white {
+    color: #FFFFFF !important;
+}
+
+.custom-st-search-filter {
+    background-color: #F5F5F5;
+}
+
+.custom-st-icon-hover:hover {
+    fill: #999999;
+}
+
+.custom-st-icon-remove-hover:hover {
+    fill: #FF7373;
+}
+
+.custom-st-required-field {
+    color: #FF0000;
+}
+
+.custom-st-min-width-75 {
+    min-width: 75px;
+}
+
+.custom-st-min-width-125 {
+    min-width: 125px;
+}
+
+.custom-st-min-width-175 {
+    min-width: 175px;
+}
+
+.custom-st-min-width-225 {
+    min-width: 225px;
+}
+
+.custom-st-min-width-275 {
+    min-width: 275px;
+}
+
+.custom-st-min-width-325 {
+    min-width: 325px;
+}
+
+.custom-st-min-width-375 {
+    min-width: 375px;
+}
+
+.custom-st-min-width-425 {
+    min-width: 425px;
+}
+
+.custom-st-min-width-475 {
+    min-width: 475px;
+}
